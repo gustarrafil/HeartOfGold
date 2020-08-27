@@ -1,0 +1,259 @@
+cousera ux/iu
+
+semana 1
+	o que
+	como
+	quando
+	por que
+
+	utilidade
+	usabilidade
+	desejabilidade
+
+	pesquisa
+		qual a necessidade do user
+		mapa de empatia
+		personas
+			pra quem eu to desenvolvento
+				entender quem é
+				identificar padrões
+				criar persona pelos padrões
+				atualizar persona
+		jobs to be done
+			forma de criar soluções pro problema que user tenta resolver
+			contexto da situação
+				quando [contexto], eu quero [motivação], para que eu possa [proposta de valor]
+	exploração
+		transformar infos em ideias
+		protótipo
+	criação
+		design
+		teoria das cores
+		arquitetura de info
+		atomic design
+		style guide
+		heurísticas
+		boas práticas
+		acessibilidade
+		plataformas
+		interação de gestos mobile
+	análise
+		métricas
+		mapa de calor
+		conversão
+
+	basico
+		planejamento
+			the planning fallacy theory
+			quebrar tarefas
+			começar pelas tarefas difíceis
+			eleger um guardião
+			checkpoints -> versionamento
+
+	conhecendo o user
+		viabilidade
+			financeiramente viável
+		capacidade
+			possibilidade tecnológica
+		desejabilidade
+			necessidades user -> pesquisa
+				bom roteiro
+					o que eu gostaria de descobrir com as perguntas
+					entender contexto de user
+					como? e por quê?
+				como se comportar ao falar com user
+					evitar enviesar
+					conhecer mais sobre a pessoa
+					não completar raciocínio do entrevistado
+					pedir permissão pra gravação
+					recapitular ao final
+
+	jornada do user
+		mapa da jornada
+			contexto de uso / user / ações em sequência até objetivo (backwards planning)
+
+semana 2
+	usabilidade e prototipacao rapida
+		brainstorming
+			limitar o foco
+		MESCRAI
+			Modifique
+			Elimine
+			Substitua
+			Combine
+			Rearranje
+			Adapte
+			Inverta
+		Crazy 8's
+			1 ideia em 8 diferentes visões em 8 min
+
+		prototipo rapido
+			representatividade - eliminar jargões
+			versatilidade de produção
+			precisão
+			interatividade
+			evolução
+		regra de Pareto
+			desenhar 2% das funções que vão ser usadas, 80% do tempo
+
+		prototipo alta fidelidade
+			interatividade
+			elementos visuais
+			conteúdo
+
+			storyboard com hipoteses
+
+semana 3
+	intro a analises de arquiteturas de info
+		navegacao
+		busca
+		organizacao
+		rotulacao
+	wireframes
+		conteudo
+		estrutura
+		hierarquia de elementos
+		funcionalidade (como os elementos funcionam juntos)
+		comportamento dos elementos com os users
+	nao colocar no wireframe
+		core / tipografia / design / imagens
+		textos sem significado (colocar faixas cinzas simulando linhas)
+	grid
+	modelo atomico
+		atomo / moleculas / organismos / templates / paginas
+	"nós não estamos fazendo o design de páginas, estamos fazendo o design de sistemas de componentes"
+	
+semana 4
+	principios de design
+		"o papel do designer é o de um anfitrião muito bom e cuidadoso que antecipa as necessidades de seus convidados"
+		empatia
+		"design é a solução para um problema. arte é a questão para um problema"
+		problema
+		"se eu perguntasse às pessoas o que elas queriam, teriam dito cavalos mais rápidos"
+		ideação
+		"eu não falhei. apenas descobri 10mil maneiras que não funcionam"
+		prototipagem
+		"é através dos erros que você pode crescer de verdade. você tem que ser ruim para poder ser bom"
+		teste
+
+		design sprint
+			5 dias -> pessoas engajadas | sabem o que tao fazendo | um decisor com voto de minerva -> ~7 pessoas
+				entendimento - 101
+					nivelar conhecimento
+					objetivo longo prazo
+					analise SWOT
+					mapa da jornada do user
+					fale com experts do negocio | how might be
+				remix - sketch
+					buscar referencias existentes
+					"brainstorming" (e outros parecidos)
+				decisao - votacao
+					mapa de calor
+					enquete
+					storyboard
+				prototipo - recrutamento
+					mao na massa
+					começo do design e recrutamento pra teste de usabilidade
+				teste - consolidacao
+					teste de usabilidade -> 6 perfis pra teste
+
+		styleguide
+			"como podemos fazer o design de todo o sistema de modo organizado"
+			"como manter consistencia"
+
+		10 heuristicas
+			usuario acima de tudo
+				visibilidade e status do sistema
+				controle e liberdade
+				flexibilidade e eficiencia
+			controle de expectativa
+				consistencia e padroes
+				correspondencia com o mundo real
+				ajuda e documentacao
+			tratamento de erros
+				prevencao de erros
+				ajuda no reconhecimento, diagnostico e recuperacao
+				reconhecimento sobre memorizacao
+			simplicidade
+				estetica e design minimalista
+
+semana 5
+	acessibilidade e multiplataforma
+		WCAG (ter o plugin) -> colorsafe
+
+	responsivo
+		facil de implementar
+		abordagem mais simples de design
+		favorecido nas buscas do google
+
+		mais lento
+		problemas com dispositivos antigos
+	adaptativo
+		mais rapido
+		mais otimizado
+		menor trafego de informação
+
+		desenvolvimento mais caro
+
+	padroes web - historyoficons.com
+		icones -> sempre que possivel com labels
+			outline / filled / solid / flat / hand-drawn / skeumorficos
+
+	espaçamentos e tamanhos
+		tamanho
+		entrelinha
+		espaçamento
+
+	tipografia e espaçamentos
+
+	escolher tipografia
+		qual a ideia?
+		legibilidade
+		propósito
+		teste de variação
+		teste de contraste
+
+	cores
+		primarias / secundarias / terciarias
+		quentes / frias / neutras
+		psicologia das cores
+
+	gestos e interações
+		"atualmente o trabalho do designer nao é desenhar uma tela e sim criar interações"
+		os gestos são principalmente movimentos de mão, mas também podem incluir agitação, titulação ou movimentação do dispositivo
+
+		tap / double tap / drag / flick / pinch / spread / press
+
+	transições e microinterações
+		mudar tela de forma abrupta  / animação
+
+		tenha um objetivo claro
+		partir do ponto de onde saíram
+		devem parecer com interações do mundo real
+		cuidado com a duração
+
+	refinando o layout
+		bater o olho e "saber" o que é
+
+semana 6
+	linguagem da empresa
+		"uma marca é uma ideia que voce representa, realizada pelo que voce faz e expressa atraves de sua personalidade"
+
+	arquitetura da informação
+		fazer antes do wireframe
+
+	testes
+		"se fizermos tudo absolutamente da forma correta, um projeto estará talvez 80% correto no dia do lançamento"
+		1 o que ta acontecendo
+			1 dados gerais
+			2 aquisição, retenção e engajamento
+			3 comportamento, conversao e funis
+			4 performance
+			5 analise em tempo real
+		2 por que esta acontecendo
+			1 testes de usabilidade
+			2 testes remotos
+			3 session recordings
+			4 teste A/B
+				"só sei que nada sei"
+		3 melhoria continua

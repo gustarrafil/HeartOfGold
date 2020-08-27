@@ -1,0 +1,318 @@
+Links Úteis e Textos Complementares
+
+Introdução
+Taqtile (site) - http://www.taqtile.com.br/
+Site NEU - http://uspempreende.org/
+FB NEU - https://www.facebook.com/uspempreende
+
+UX
+UX Project Checklist (site) - https://uxchecklist.github.io/
+The Elements of User Experience: User-Centered Design for the Web and Beyond (livro) - https://goo.gl/RRQyrs
+UX não é um título, é um estilo de vida! (texto) - https://goo.gl/UaAB1a
+User Experience Careers (livro) - https://goo.gl/29gywz
+Por onde começar na área de UX? (texto) - https://goo.gl/dEUR2o
+
+Referências
+Nielsen Norman Group (site) - https://www.nngroup.com/
+Baymard Institute (site) - https://baymard.com/
+UX Design CC (site) - https://goo.gl/9LiLUK
+UX movement (site) - http://uxmovement.com/
+UX planet (site) - https://uxplanet.org/
+UX.blog (site) - https://uxdesign.blog.br/
+User interface enineering (site) - https://www.uie.com/
+
+Básicos para começar
+Novos Fundamentos do Design (livro) - https://goo.gl/Z8uTN1
+Curso de Design Gráfico. Princípios e Práticas (livro) - https://goo.gl/ef6MZj
+Exploring the "Planning Fallacy": Why People Underestimate Their Task Completion Times (texto) - https://goo.gl/nTv9ZY
+Creativity in Groups (Research on Managing Groups and Teams) (livro) - https://goo.gl/DfYg1G
+UXtools (site) - https://uxtools.co/tools/design
+
+Ferramentas Design:
+Sketch (ferramenta) - https://www.sketchapp.com/
+Figma (ferramenta) - https://www.figma.com/
+Adobe photoshop (ferramenta) - https://www.adobe.com/br/products/photoshop.html?promoid=PC1PQQ5T&mv=other
+Adobe illustrator (ferramenta) - https://www.adobe.com/br/products/illustrator.html?promoid=PGRQQLFS&mv=other
+Adobe xd (ferramenta) - https://www.adobe.com/br/products/xd.html?promoid=PYPVQ3HN&mv=other
+Affinity Designer (ferramenta) - https://affinity.serif.com/pt-br/
+Framer (ferramenta) - https://framer.com/
+Gravit Designer (ferramenta) - https://www.designer.io/
+Axure (ferramenta) - https://www.axure.com/
+
+Ferramentas Protótipo:
+Principle (ferramenta) - http://principleformac.com/
+Adobe xd (ferramenta) - https://www.adobe.com/br/products/xd.html?promoid=PYPVQ3HN&mv=other
+Proto.io (ferramenta) - proto.io
+Flinto (ferramenta) - https://www.flinto.com/
+Framer (ferramenta) - https://framer.com/
+Marvel (ferramenta) - https://marvelapp.com/
+Figma (ferramenta) - https://www.figma.com/
+InVision (ferramenta) - https://www.invisionapp.com/
+Axure (ferramenta) - https://www.axure.com/
+
+Ferramentas Entregas:
+Zeplin (ferramenta) - https://zeplin.io/
+Specctr (ferramenta) - https://specctr.com/cloud/home
+Simply (ferramenta) - https://sympli.io/
+UXpin (ferramenta) - https://www.uxpin.com/
+InVision (ferramenta) - https://www.invisionapp.com/
+Avocode (ferramenta) - https://avocode.com/
+Marvel (ferramenta) - https://marvelapp.com/
+Figma (ferramenta) - https://www.figma.com/
+
+Ferramentas Monitoramento:
+Smartlook (ferramenta) - https://www.smartlook.com/pt/
+Hotjar (ferramenta) - https://www.hotjar.com/
+Jaco (ferramenta) - http://www.getjaco.com/
+Fullstory (ferramenta) - https://www.fullstory.com/
+
+#######################################################################################
+
+De onde tirar ideias?
+Graphic Design Thinking: Beyond Brainstorming (livro) - https://goo.gl/ARWm7E
+Seven Secrets to Good Brainstorming (texto) - https://goo.gl/eGHRqq
+Six Surefire Ways to Kill a Brainstorm (texto) - https://goo.gl/1g8qhJ
+d.school brainstorming rules (vídeo) - https://goo.gl/TW1LbG
+Tales of creativity and play (vídeo) - https://goo.gl/n1s52D
+
+Protótipo
+Prototyping for Hosts - How a tool for engineers became integral to the design process (texto) - https://goo.gl/93HYYk
+Design Better And Faster With Rapid Prototyping (texto) - https://goo.gl/X35zMH
+What Is a Prototype: A Guide to Functional UX (texto) - https://goo.gl/8vuogD
+Why prototyping is a must for designers (texto) - https://goo.gl/sDWLJo
+
+Ferramentas de prototipação
+UI8 (site) - https://ui8.net/
+Proto.io (ferramenta) - https://proto.io/
+Sketch (ferramenta) - https://www.sketchapp.com/
+Sketch app sources (site) - https://www.sketchappsources.com/
+Por que a Taqtile migrou para o Sketch? (texto) - https://goo.gl/4UpxVa
+Hey, Designer (textoS) - https://heydesigner.com/sketchapp/
+The sketch handbook (livro) - http://web.sketch-handbook.com/
+Guide to getting started in sketch (texto) - https://goo.gl/x464fE
+Medium - Sketch (textoS)- https://medium.com/sketch-app
+Sketch tutorials (vídeoS)- https://goo.gl/oT7kuP
+design+code (livro) - https://designcode.io/
+Invision (ferramenta) - https://www.invisionapp.com/
+Figma (ferramenta) - https://www.figma.com/
+Visual Design Fundamentals (curso) - https://goo.gl/15yVng
+User Interface Design and Development (curso) - https://goo.gl/2yjA9D
+Why Professors at Stanford and UC Berkeley Use Figma to Teach Design (texto) - https://goo.gl/W4h6cR
+Downloads Figma (ferramenta) - https://www.figma.com/downloads
+Adobe XD (ferramenta) - https://www.adobe.com/br/products/xd.html#x
+Framer (ferramenta) - https://framer.com/
+Ferramentas de prototipagem — promissoras — para 2017 (texto) - https://goo.gl/nePMBM
+All prototyping tools (site) - https://goo.gl/2GB8na
+
+Usabilidade
+Survey Monkey (ferramenta) - https://pt.surveymonkey.com/
+Introdução à interfaces heurísticas (texto) - https://goo.gl/PWi3gN
+Mobile Usability (livro) - https://goo.gl/i2AhG6
+
+#######################################################################################
+
+Arquitetura de informação
+Axure (ferramenta) - https://www.axure.com/
+Justinmind (ferramenta) - https://www.justinmind.com/
+Balsamiq (ferramenta) - https://balsamiq.com/products/
+Reflexões sobre Arquitetura da Informação para dispositivos móveis (texto) - https://goo.gl/Ph3F4b
+
+Wireframes
+To wireframe, or not to wireframe, that is the question (texto) (imagem utilizada) - https://goo.gl/9uCk1L
+Dribbble Eddi Lobanovskiy (imagem uilizada) - https://dribbble.com/lobanovskiy
+Dribbble Fikri Studio (imagem utilizada) - https://dribbble.com/bagus_fikri
+Dribbble Cuberto (imagem utilizada) - https://dribbble.com/cuberto
+Dribbble Daniel Máslo (imagem utilizada) - https://dribbble.com/danmaslo
+Grid. Construção e Desconstrução (livro) - https://goo.gl/waTSKa
+3 razões para mudar sua concepção sobre grids (texto) - https://goo.gl/ZYKwKw
+Just in mind (ferramenta) - https://www.justinmind.com/
+Axure (ferramenta) - https://www.axure.com/
+Balsamiq (ferramenta) - https://balsamiq.com/
+
+Modelo atômico
+Brad Frost: Atomic Design JoomlaDay Denver 2016 (vídeo) - https://goo.gl/BMi4Fg
+Atomic design (artigos) - https://goo.gl/26a6bg
+Atomic design (ebook) - https://goo.gl/CQMzZC
+
+#######################################################################################
+
+Design
+The Design of Everyday Things: Revised and Expanded Edition (livro) - https://goo.gl/u9hGzq
+Emotional Design: Why We Love (or Hate) Everyday Things (livro) - https://goo.gl/FRsVnK
+Don Norman: 3 maneiras pelas quais o design te faz feliz (video) - https://goo.gl/urA7En
+Design Thinking. Uma Metodologia Poderosa Para Decretar o Fim das Velhas Ideias (livro) - https://goo.gl/oFrkYV
+The first secret of great design | Tony Fadell (vídeo) - https://goo.gl/Jw3Qxe
+Design for All 5 Senses | Jinsop Lee | TED Talks (vídeo) - https://goo.gl/oUyPX2
+It’s not you. Phones are designed to be addicting (vídeo) - https://goo.gl/3Sanm1
+Welcome to Nubank The story behind our welcome kit (texto) - https://www.designernews.co/stories/88854-welcome-to-nubank-the-story-behind-our-welcome-kit
+How we designed our bank account: NuConta — Part I (texto) - https://medium.com/nubank-design/how-we-designed-our-bank-account-nuconta-part-i-18105b8d3dfe
+Universal Methods of Design: 100 Ways to Research Complex Problems, Develop Innovative Ideas, and Design Effective Solutions (livro) - https://goo.gl/DTcEPJ
+Designing Mobile Apps (livro) - https://goo.gl/fTzjUx
+Design Basics: From Ideas to Products (livro) - https://goo.gl/5azhKy
+IDEO - Design Kit (site) - http://www.designkit.org/methods
+Hyper Island. Tool box (site) -http://toolbox.hyperisland.com/
+Project of how .Tools (site) - http://projectofhow.com/
+
+Process
+Design Sprint
+	Google ventures Design Sprint - http://www.gv.com/sprint/
+	Design Sprint kit by Google - https://designsprintkit.withgoogle.com/
+	Design Sprint explained in 1 minute (vídeo) - https://goo.gl/PXF123
+	GV Youtube sprint playlist (vídeoS) - https://goo.gl/CqAkPH
+	Sprint stories (textoS) - https://sprintstories.com/
+	User Research - Quick and dirty (vídeo)- https://goo.gl/9jcMZz
+	Introduction to Scrum - 7 Minutes (vídeo) - https://goo.gl/REjyvz
+
+Style Guide
+Style Guide Resources (site) - http://styleguides.io/
+
+As 10 heurísticas de usabilidade
+10 Usability Heuristics for User Interface Design (texto) - https://goo.gl/9UQtb8
+Usability 101: Introduction to Usability (texto) - https://goo.gl/aqCGxQ
+Appropriating and assessing heuristics for mobile computing (texto) https://goo.gl/nJeZtw
+
+#######################################################################################
+
+Acessibilidade
+Lei citada (texto) - https://goo.gl/tzYWe8
+W3 (site) - https://www.w3.org/
+Web Content Accessibility Guidelines (WCAG) Overview (site) - https://goo.gl/9HqAgB
+Acessibilidade: quais tipos de usuários ter em mente (texto) - https://goo.gl/V9VHBJ
+Developing Accessible Websites (texto) - https://goo.gl/Q8U6TJ
+Guideline de Acessibilidade baseada na WCAG 2.0 (texto) - https://goo.gl/gh4moR
+Acessibilidade: experiências acessíveis em vários dispositivos (texto) - https://goo.gl/2mu7C5
+Designing for Dyslexia, Part 1 (texto) - https://goo.gl/vWP22r
+Top 5 web accessibility complaints and how to address them (texto) - https://goo.gl/Pazmrz
+Designing accessible products (texto) - https://goo.gl/extaew
+Improving The Color Accessibility For Color-Blind Users (texto) - https://goo.gl/HP8caQ
+Optimal colors to improve readability for people with dyslexia (texto) - https://goo.gl/8LAemy
+Accessibility: what you need to know about mobile app development for people with special needs (texto) - https://goo.gl/2CfYTX
+
+Multiplataformas
+Responsivo X Adaptativo (animação utilizada no vídeo) - https://goo.gl/cWXKhT
+F-Shaped Pattern of Reading on the Web: Misunderstood, But Still Relevant (Even on Mobile) (texto) - https://goo.gl/5qsctV
+How the human eye reads a website (texto) - https://goo.gl/3AzRxc
+
+SketchApp
+Sources (site) - https://www.sketchappsources.com/
+UI8 (site) - https://ui8.net/
+
+Designing for iOS
+The iOS Design Guidelines (site) - https://goo.gl/F3UXrT
+Developer Apple (site) - https://developer.apple.com/
+Apple developer resources (site) - https://goo.gl/zXNRdD
+iOS 10 GUI iPhone & iPad (site) - https://iosdesignkit.io/ios-gui/
+Screens and components of iOS 11 for iPhone X and iPhone 8 (site) - https://iosdesignkit.io/ios-11-gui/
+
+Designing for Android
+Android design in action (site) - https://goo.gl/FXkdjR
+Material design introduction (site) - https://goo.gl/SxnBBD
+Google Design (site) - https://design.google/resources/
+
+UX guidelines
+Apple guidelines (site) - https://goo.gl/PqD7Kw
+Material Design (site) - https://material.io/
+Material Design Guidelines (site) - https://material.io/guidelines/
+Principles of Mobile App Design (site) - https://goo.gl/ZoYvnB
+
+#######################################################################################
+
+Elementos de interface do usuário
+Behance (site) - https://www.behance.net/
+Collect UI (site) - http://collectui.com/
+Design Ispration (site) - https://www.designspiration.net/
+Dibbble (site) - https://dribbble.com/
+Beginning Graphic Design (vídeoS) - https://goo.gl/xp1P5r
+CSS Baseline: The Good, The Bad And The Ugly (texto) - https://goo.gl/7UTize
+
+Icons
+History of icons (site) - https://historyoficons.com/
+TheNounProject (site) - https://thenounproject.com/
+Why danger symbols can’t last forever (vídeo) https://goo.gl/b37i9Y
+
+Colors
+ColorWheel - https://goo.gl/E77f7m
+A Psicologia das Cores. Como as Cores Afetam a Emoção e a Razão (livro) - https://goo.gl/x29JDZ
+
+Typography
+Fonts google(free fonts) (site) - https://fonts.google.com/
+Buttericks - practical typography (site) - https://practicaltypography.com/
+Discover typography (site) - https://discover.typography.com/
+My fonts (Para achar aquela fonte que não sabemos o nome) (site) - https://goo.gl/cq5zfR
+Combinações tipográficas (site) - https://fontpair.co/
+Pensar com Tipos (livro) - https://goo.gl/6pZijn
+The secret language of letter design (with English subtitles) | Martina Flor (vídeo) - https://goo.gl/4kGdB8
+Typography Tutorial - 10 rules to help you rule type (video) - https://goo.gl/TD7mZQ
+
+Gestos e interações
+UXpin (ferramenta) - https://www.uxpin.com/
+Material motion (site) - https://goo.gl/EGvKiC
+
+Refinando o layout
+Dribbble (site) - https://dribbble.com/
+Princing Pages (site) - http://www.pages.xyz/type/pricing
+Really good emails (site) - https://reallygoodemails.com/
+Designers’ secret source (site) - https://muz.li/
+instaui (intagram) - https://www.instagram.com/instaui/
+uzers.co (instagram) - https://www.instagram.com/uzers.co/
+myinterface (instagram)https://www.instagram.com/myinterface/
+Hotjar (ferramenta) - https://www.hotjar.com/
+Freshmarketer (ferramenta) - https://goo.gl/N6aK9d
+Resource Cards (site) - https://resourcecards.com/
+Daily UI (site) - http://www.dailyui.co/
+Collect UI (site) - http://collectui.com/
+
+#######################################################################################
+
+Linguagem da empresa, cliente e copyright
+Food52 (site utilizado) - https://food52.com/
+The Cook’s warehouse (site utilizado) https://www.cookswarehouse.com/
+Card Sorting (texto) - https://goo.gl/F1dkXZ
+Arquitetura de informação (texto) - https://endeavor.org.br/arquitetura-da-informacao/
+
+Patterns & inspirations
+UI Patterns (site) - http://ui-patterns.com/patterns
+Lovely UI (site) - http://www.lovelyui.com/
+Pttrns (site) - https://pttrns.com/
+Zurb (site) - https://zurb.com/patterntap
+Inspired UI (site) - http://inspired-ui.com/
+UPlabs (site) - https://www.uplabs.com/
+EmptyStat (site) - http://emptystat.es/
+Good UI (site) - http://www.goodui.org/
+
+#######################################################################################
+
+Análises e Testes remotos e ferramentas
+Influência da interface gráfica em m-commerces sobre as motivações da compra online em smartphones (texto) - https://goo.gl/HjDuT9
+5 dos erros mais comuns cometidos em UX (texto) - https://goo.gl/JpJXC8
+Interaction design foundation (cursos) - https://www.interaction-design.org/
+How to choose the right UX metrics for your product (texto) - https://goo.gl/xVz7Hj
+Measuring the User Experience on a Large Scale: User-Centered Metrics for Web Applications (texto) - https://goo.gl/MH1Rjf
+
+Testes
+Lookback (ferramenta) - https://lookback.io/
+Hotjar (ferramenta) - https://www.hotjar.com/
+Smartlook (ferramenta) - https://www.smartlook.com/pt/
+Jaco (ferramenta) - http://www.getjaco.com/
+Fullstory (ferramenta) - https://www.fullstory.com/
+
+Analitycs
+Analytics (ferramenta) - https://www.google.com/analytics/
+Firebase (ferramenta) - https://firebase.google.com/?hl=pt-br
+New relic. (ferramenta) - https://newrelic.com/
+Hotjar (ferramenta) - https://www.hotjar.com/
+Fabric (ferramenta) - https://get.fabric.io/
+Google Play(ferramenta) - https://play.google.com/store
+
+Quais as mudanças e os paradigmas do UX para o futuro?
+Lean UX (livro) - https://goo.gl/ztrSvU
+Material motion (site) - https://goo.gl/EGvKiC
+Nose Zone (video) - https://goo.gl/qfFWJz
+The iPhone X’s Real Legacy: Making Your Face The Interface (texto) - https://goo.gl/RFpWtV
+Moral machine (site) - moralmachine.mit.edu/
+Figma (ferramenta) - https://www.figma.com
+Magic Leap (site) - https://www.magicleap.com/
+Nosso trabalho é desenhar cada vez menos interfaces (texto) - https://goo.gl/tgnpMh
+
+#######################################################################################
+
