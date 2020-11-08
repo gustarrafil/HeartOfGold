@@ -12,7 +12,7 @@ public class Scan {
         for (int k=0;k<file_list.size();k++) {
             File txtfile = new File("G:\\Meu Drive\\Sistemas de Informação\\SI " +
                     "2s-2020\\Programação Orientada a " +
-                    "Objetos 2\\LeitorPalavras\\src\\" + file_list.get(k) + ".txt");
+                    "Objetos 2\\LeitorPalavras\\src\\" + file_list.get(k));
             this.txtreader = new Scanner(txtfile);
         }
 
@@ -23,7 +23,7 @@ public class Scan {
             complete += data;
         }
         complete = complete.toLowerCase();
-        String delimiters = "\\s+|,\\s*|\\.\\s*";
+        String delimiters = "\\s+|,\\s*|\\.\\s*|[(]|[)]|[-]|[?]|[!]";
         original_list = complete.split(delimiters);
         txtreader.close();
     }

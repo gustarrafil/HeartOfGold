@@ -24,7 +24,8 @@ public class CompleteExecution {
                     starting_composed_list.complete);
 //                System.out.println(group_done.final_list);
 
-            ExportCSV export_csv_file = new ExportCSV(group_done.final_list);
+            String file_name = file_list.original_file_name;
+            ExportCSV export_csv_file = new ExportCSV(group_done.final_list, file_name);
         }
     }
 }

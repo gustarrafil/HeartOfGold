@@ -1,11 +1,12 @@
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class ExportCSV {
-    public ExportCSV (ArrayList<ArrayList<String>> last_one) {
-        try (PrintWriter writer = new PrintWriter(new File("primeiro_teste.csv"))) {// nome do txt
+    public ExportCSV (ArrayList<ArrayList<String>> last_one, String file_name) {
+        try (PrintWriter writer = new PrintWriter(new File(file_name + ".csv"))) {// nome do txt
             StringBuilder csv_builder = new StringBuilder();
             for (int k = 0; k < last_one.size(); k++) {
                 for (int p = 0; p < last_one.get(k).size(); p++) {
@@ -20,7 +21,9 @@ public class ExportCSV {
             }
 
             writer.write(csv_builder.toString());
-            System.out.println("done!");
+
+
+            JOptionPane.showMessageDialog(null, "Done! Finishing program.");
 
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());

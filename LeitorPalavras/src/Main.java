@@ -1,7 +1,4 @@
 import javax.swing.*;
-import java.io.PrintWriter;
-import java.util.*;
-import java.io.File;
 import java.io.FileNotFoundException;
 
 public class Main {
@@ -183,8 +180,11 @@ public class Main {
 
 
         } catch (FileNotFoundException e) {
-            System.out.println("deu ruim");
+            JOptionPane.showMessageDialog(null, "Program failed.\nStart again!");
+            //            System.exit(0);
+//            System.out.println();
         }
+        System.exit(1);
 
     }
 }
