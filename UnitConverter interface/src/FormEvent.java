@@ -5,8 +5,6 @@ public class FormEvent extends EventObject {
 
     private String from;
     private String to;
-    private String convert_from;
-    private String convert_to;
 
     /**
      * Constructs a prototypical Event.
@@ -18,11 +16,10 @@ public class FormEvent extends EventObject {
         super(source);
     }
 
-    public FormEvent(Object source, String from, String convert_from, String convert_to) {
+    public FormEvent(Object source, String from) {
         super(source);
         this.from = from;
-        this.convert_from = convert_from;
-        this.convert_to = convert_to;
+
     }
 
     public String Conversion() {
@@ -33,8 +30,6 @@ public class FormEvent extends EventObject {
         try {
             from_number = Double.parseDouble(from);
 
-            System.out.println(getConvert_from());
-            System.out.println(getConvert_to());
 
             // conversao aqui
 
@@ -64,20 +59,5 @@ public class FormEvent extends EventObject {
         this.to = to;
     }
 
-    public String getConvert_from() {
-        return convert_from;
-    }
-
-    public void setConvert_from(String convert_from) {
-        this.convert_from = convert_from;
-    }
-
-    public String getConvert_to() {
-        return convert_to;
-    }
-
-    public void setConvert_to(String convert_to) {
-        this.convert_to = convert_to;
-    }
 
 }

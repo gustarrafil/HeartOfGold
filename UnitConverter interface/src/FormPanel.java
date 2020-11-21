@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 public class FormPanel extends JPanel {
 
     private JLabel convertLabel;
+    private JComboBox convert_type;
     private JLabel fromLabel;
     private JLabel toLabel;
     private JTextArea fromField;
@@ -24,6 +25,7 @@ public class FormPanel extends JPanel {
 
         convertLabel = new JLabel("Convert unit");
         convertLabel.setFont(convertLabel.getFont().deriveFont(20.0f));
+        convert_type = new JComboBox();
         fromLabel = new JLabel("From");
         fromLabel.setFont(fromLabel.getFont().deriveFont(16.0f));
         toLabel = new JLabel("To");
@@ -42,15 +44,14 @@ public class FormPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                String convert_from = (String)fromCombo.getSelectedItem();
-                String convert_to = (String)toCombo.getSelectedItem();
-                String from = fromField.getText();
+                String from = "";
+                from = fromField.getText();
 
                 if (from.trim().isEmpty()) {
                     JOptionPane.showMessageDialog(null, "Insert a value to be converted.");
                 } else {
                     toField.setText("");
-                    FormEvent event = new FormEvent(this, from, convert_from, convert_to);
+                    FormEvent event = new FormEvent(this, from);
 
                     if (formListener != null) {
                         formListener.formEventOccurred(event);
@@ -64,10 +65,12 @@ public class FormPanel extends JPanel {
                         // return converted number to screen
                         toField.append(converted_value);
                     }
-
                 }
             }
         });
+
+        // combo box options
+
 
         // combo box from
         ConversionOptions fromModel = new ConversionOptions();
@@ -174,9 +177,22 @@ public class FormPanel extends JPanel {
         gc.gridy = 2;
         gc.anchor = GridBagConstraints.CENTER;
         add(okBtn, gc);
+
+        /////////////////////////////////////////////////////////////
+
+        gc.weightx = 1;
+        gc.weighty = 0.5;
+
+        gc.gridx = 1;
+        gc.gridy = 3;
+        gc.anchor = GridBagConstraints.CENTER;
+        add(convert_type, gc);
+
+
     }
 
     public void setFormListener(FormListener listener) {
         this.formListener = listener;
     }
+
 }

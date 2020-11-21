@@ -1,33 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class MainFrame extends JFrame {
 
     private Toolbar toolbar;
     private FormPanel formPanel;
 
-    public MainFrame() {
+    public MainFrame() throws IOException {
         super("Unit Converter");
 
         setLayout(new BorderLayout());
 
         toolbar = new Toolbar();
         formPanel = new FormPanel();
-
-//        formPanel.setFormListener(new FormListener() {
-//            public void formEventOccurred(FormEvent e) {
-//                String from = e.getFrom();
-////                try {
-////                    double from_number = Double.parseDouble(from);
-////                    System.out.println(from_number);
-////                } catch (NumberFormatException er) {
-////                    JOptionPane.showMessageDialog(null, "Only numbers accepted.", "Error",1);
-////
-////                }
-//
-//
-//            }
-//        });
 
         setJMenuBar(createMenuBar());
 
@@ -42,23 +30,35 @@ public class MainFrame extends JFrame {
     private JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar();
 
-        JMenu windowMenu = new JMenu("window");
-        JMenuItem testDataItem = new JMenuItem("test");
+        JMenu helpMenu = new JMenu("Help");
+        JMenuItem testDataItem1 = new JMenuItem("Help");
+        JMenuItem testDataItem2 = new JMenuItem("Disclaimer");
+        JMenuItem testDataItem3 = new JMenuItem("About");
+        testDataItem3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Toolbar.setSecondFrame(true);
+            }
+        });
 
-        windowMenu.add(testDataItem);
+        helpMenu.add(testDataItem1);
+        helpMenu.add(testDataItem2);
+        helpMenu.addSeparator();
+        helpMenu.add(testDataItem3);
 
-        JMenu fileMenu = new JMenu("file");
-        JMenuItem exportDataItem = new JMenuItem("Export data...");
-        JMenuItem importDataItem = new JMenuItem("Import data...");
+        JMenu fileMenu = new JMenu("File");
         JMenuItem exitItem = new JMenuItem("Exit");
+        exitItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
-        fileMenu.add(exportDataItem);
-        fileMenu.add(importDataItem);
-        fileMenu.addSeparator();
         fileMenu.add(exitItem);
 
         menuBar.add(fileMenu);
-        menuBar.add(windowMenu);
+        menuBar.add(helpMenu);
 
         return menuBar;
     }

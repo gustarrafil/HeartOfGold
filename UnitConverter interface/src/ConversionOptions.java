@@ -9,8 +9,10 @@ public class ConversionOptions extends DefaultComboBoxModel {
         options_from = new DefaultComboBoxModel();
         options_to = new DefaultComboBoxModel();
 
-        options_from.addElement("A");
-        options_to.addElement("B");
+
+
+//        options_from.addElement(MeasureType.DISTANCE);
+//        options_to.addElement(MeasureType.PRESSURE);
     }
 
     public DefaultComboBoxModel getOptionsFrom() {
