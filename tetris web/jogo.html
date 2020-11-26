@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="estilo.css">
 
         <style>
-            .naosei {
+            .espaco {
                 display: flex;
             }
 
@@ -38,7 +38,9 @@
                 height: 80px;
                 display: flex;
                 flex-wrap: wrap;
-                background-color: yellow;
+                background-color: white;
+                border: 2px solid black;
+
             }
 
             .mini-dentro div {
@@ -101,7 +103,7 @@
                     <div class="coluna">
                         <div class="modal pequeno">
                             <div id="tabuleiro" >
-                                <div class="linha naosei">
+                                <div class="linha espaco">
                                     <!-- grid -> dentro -->
                                     <div class="coluna" id="dentro">
                                         <div></div>
@@ -338,10 +340,10 @@
                                 </div>
                                 <div class="linha" id="controle_jogo">
                                     <div >
-                                        <button id="start-button" onclick=""> Iniciar jogo</button>
+                                        <button id="start-button" onclick="">Play/Pause</button>
                                     </div>
                                     <div >
-                                        <button onclick="" id="pausar"> pause </button>
+                                        <!-- <button onclick="" id="pausar"> pause </button> -->
                                     </div>
                                 </div>
                             </div>
@@ -366,10 +368,9 @@
                         <div id="pontos" class="modal pequeno lateral">
                             <div>
                                 <h4 >Pontuação</h4>
-                                <h4 id="score">0</h4>
                             </div>
                             <div>
-                                
+                                <h4 id="score">0</h4>
                             </div>
                         </div>
                         <div class="modal pequeno lateral" >
