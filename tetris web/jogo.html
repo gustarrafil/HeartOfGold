@@ -28,7 +28,7 @@
             }
 
             .peca {
-                background-color: blue;
+                /* background-color: blue; */
             }
 
 
@@ -46,6 +46,10 @@
             .mini-dentro div {
                 height: 20px;
                 width: 20px;
+            }
+
+            .roll {
+                transform: rotateZ(180deg);
             }
         </style>
 
@@ -362,7 +366,7 @@
                                 <h4>Nível</h4>
                             </div>
                             <div>
-                                <h4>0</h4>
+                                <h4 id="nivel">0</h4>
                             </div>
                         </div>
                         <div id="pontos" class="modal pequeno lateral">
@@ -378,15 +382,15 @@
                                 <h4 >Linhas eliminadas</h4>
                             </div>
                             <div>
-                                <h4>0</h4>
+                                <h4 id="linhas_eliminadas">0</h4>
                             </div>
                         </div>
                         <div class="modal pequeno lateral" >
                             <div>
-                                <h4 >Tempo</h4>
+                                <h4 >Tempo (s)</h4>
                             </div>
                             <div>
-                                <h4>0</h4>
+                                <h4 id="tempo">0</h4>
                             </div>
                         </div>
                         <div> 

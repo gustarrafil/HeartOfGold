@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'green',
         'blue',
         'pink',
-        'black'
     ]
     const start = document.querySelector('#start-button') //startbtn
 
@@ -22,9 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let ritmo
 
-    var velocidade = 1000
-    // funcao pra aumentar velocidade de acordo com nivel
-    // aumentar nivel de acordo com pontos
+    var velocidade = 2000
+
+    var nivel_numero = 1
+    const nivel = document.querySelector('#nivel')
+    nivel.innerHTML = nivel_numero
+
+    var eliminadas_numero = 0
+    const linhas_eliminadas = document.querySelector('#linhas_eliminadas')
+    linhas_eliminadas.innerHTML = eliminadas_numero
+
+    var tempo_numero = 0
+    const tempo = document.querySelector('#tempo')
+    tempo.innerHTML = tempo_numero
 
     // A1 0
     // A2 width
@@ -108,8 +117,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // desenho
     function desenhar() {
         pecaAtual.forEach(index => {
-            quadrados[posicaoAtual + index].classList.add('peca')
-            quadrados[posicaoAtual + index].style.backgroundColor = cores[random]
+            if (pecaAtual.length == 1) {
+                quadrados[posicaoAtual + index].style.backgroundColor = 'black'
+                console.log("pegou")
+            } else {
+                quadrados[posicaoAtual + index].classList.add('peca')
+                quadrados[posicaoAtual + index].style.backgroundColor = cores[random]
+            }
         })
     }
     // desenhar()
@@ -124,15 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // descer a cada segundo
     // ritmo = setInterval(descer, velocidade)
 
+    var teclaEsquerda = 37
+    var teclaCima = 38
+    var teclaBaixo = 40
+    var teclaDireita = 39
+
     // tecla pressionada
     function controle(k) {
-        if (k.keyCode === 37) {
+        if (k.keyCode === teclaEsquerda) {
             paraEsquerda()
-        } else if (k.keyCode === 38) {
+        } else if (k.keyCode === teclaCima) {
             rodar()
-        } else if (k.keyCode === 39) {
+        } else if (k.keyCode === teclaDireita) {
             paraDireita()
-        } else if (k.keyCode === 40) {
+        } else if (k.keyCode === teclaBaixo) {
             descer()
         }
     }
@@ -218,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [1, larguraDisplay + 1, larguraDisplay * 2 + 1, larguraDisplay * 2 + 2], // l
         [larguraDisplay * 2, 1, larguraDisplay + 1, larguraDisplay * 2 + 1], // j
         [larguraDisplay, 1, larguraDisplay + 1, larguraDisplay + 2], // t
-        [larguraDisplay, larguraDisplay * 2, larguraDisplay * 2 + 1, larguraDisplay + 2, larguraDisplay * 2 + 2], // 1
+        [larguraDisplay, larguraDisplay * 2, larguraDisplay * 2 + 1, larguraDisplay + 2, larguraDisplay * 2 + 2], // u
         [larguraDisplay + 1], // block
     ]
 
@@ -238,9 +257,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // botao play pause
     start.addEventListener('click', () => {
         if (ritmo) {
+            console.log("pause")
             clearInterval(ritmo)
             ritmo = null
         } else {
+            console.log("play")
             desenhar()
             ritmo = setInterval(descer, velocidade)
             proximoRandom = Math.floor(Math.random() * pecas.length)
@@ -256,13 +277,34 @@ document.addEventListener('DOMContentLoaded', () => {
             if (linha.every(index => quadrados[index].classList.contains('linhaAbaixo'))) {
                 pontos += 10
                 pontuacao.innerHTML = pontos
+                if (pontos % 20 == 0) {
+                    nivel_numero += 1
+                    nivel.innerHTML = nivel_numero
+                    velocidade -= 100
+                }
+                eliminadas_numero++
+                linhas_eliminadas.innerHTML = eliminadas_numero
                 linha.forEach(index => {
                     quadrados[index].classList.remove('linhaAbaixo')
                     quadrados[index].classList.remove('peca')
+                    if (quadrados[index].style.backgroundColor == 'black') {
+                        if (dentro.classList.contains('roll')) {
+                            dentro.classList.remove('roll')
+                            teclaEsquerda = 37
+                            teclaCima = 38
+                            teclaBaixo = 40
+                            teclaDireita = 39
+                        } else {
+                            dentro.classList.add('roll')
+                            teclaEsquerda = 39
+                            teclaCima = 40
+                            teclaBaixo = 38
+                            teclaDireita = 37
+                        }
+                    }
                     quadrados[index].style.backgroundColor = ''
                 })
                 const linhaRemovida = quadrados.splice(p, largura)
-                console.log(linhaRemovida)
                 quadrados = linhaRemovida.concat(quadrados)
                 quadrados.forEach(celula => dentro.appendChild(celula))
             }
@@ -279,3 +321,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
+
+
+
