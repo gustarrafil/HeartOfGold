@@ -1,9 +1,14 @@
 
-document.addEventListener('DOMContentLoaded', () => {
-    var dentro = document.querySelector('#dentro')
-    let quadrados = Array.from(document.querySelectorAll('#dentro div')) // squares
+// Código feito com base no video "Code Tetris: JavaScript Tutorial for Beginners"
+// do canal freeCodeCamp.org no Youtube
+// https://www.youtube.com/watch?v=rAUn1Lom6dw
 
-    const pontuacao = document.querySelector('#score') // scoredisplay
+
+document.addEventListener ('DOMContentLoaded', () => {
+    var dentro = document.querySelector('#dentro')
+    let quadrados = Array.from(document.querySelectorAll('#dentro div'))
+
+    const pontuacao = document.querySelector('#score')
     var pontos = 0
     const cores = [
         'orange',
@@ -13,9 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'blue',
         'pink',
     ]
-    const start = document.querySelector('#start-button') //startbtn
+    const start = document.querySelector('#start-button')
+    const restart = document.querySelector('#restart-button')
 
-    var largura = 10 // var cause it may change to bigger size
+    // quadradinhos no tabuleiro
+    var largura = 10
 
     let proximoRandom = 0
 
@@ -31,9 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const linhas_eliminadas = document.querySelector('#linhas_eliminadas')
     linhas_eliminadas.innerHTML = eliminadas_numero
 
-    var tempo_numero = 0
-    const tempo = document.querySelector('#tempo')
-    tempo.innerHTML = tempo_numero
+    ////////////////////////////////////////////////////
+    // Desenho de peças considerando uma planilha
 
     // A1 0
     // A2 width
@@ -55,8 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // D3 width * 2 + 3
     // D4 width * 3 + 3
 
-    // pecas tetrominoes
+    ////////////////////////////////////////////////////
+
+    // pecas
     const ipeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [1, largura + 1, largura * 2 + 1, largura * 3 + 1], // 1
         [largura, largura + 1, largura + 2, largura + 3], // 2
         [1, largura + 1, largura * 2 + 1, largura * 3 + 1], // 3
@@ -64,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const opeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [largura + 1, largura * 2 + 1, largura + 2, largura * 2 + 2], // 1
         [largura + 1, largura * 2 + 1, largura + 2, largura * 2 + 2], // 2
         [largura + 1, largura * 2 + 1, largura + 2, largura * 2 + 2], // 3
@@ -71,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const lpeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [1, largura + 1, largura * 2 + 1, largura * 2 + 2], // 1
         [largura, largura * 2, largura + 1, largura + 2], // 2
         [0, 1, largura + 1, largura * 2 + 1], // 3
@@ -78,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const jpeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [largura * 2, 1, largura + 1, largura * 2 + 1], // 1
         [0, largura, largura + 1, largura + 2], // 2
         [1, largura + 1, largura * 2 + 1, 2], // 3
@@ -85,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const tpeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [largura, 1, largura + 1, largura + 2], // 1
         [1, largura + 1, largura * 2 + 1, largura + 2], // 2
         [largura, largura + 1, largura * 2 + 1, largura + 2], // 3
@@ -92,34 +105,40 @@ document.addEventListener('DOMContentLoaded', () => {
     ]
 
     const upeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [largura, largura * 2, largura * 2 + 1, largura + 2, largura * 2 + 2], // 1
         [0, largura, largura * 2, 1, largura * 2 + 1], // 2
         [0, largura, 1, 2, largura + 2], // 3
         [1, largura * 2 + 1, 2, largura + 2, largura * 2 + 2], // 4
+        [largura, largura * 2, largura * 2 + 1, largura + 2, largura * 2 + 2], // 1
+        // houve algum erro ao fazer a rotacao completa da peca, entao sao duas vezes mesmo uma mesma rotacao para funcionar
     ]
 
     const blockpeca = [
+        // desenhos no tabuleiro de acordo com rotacoes
         [largura + 1], // 1
         [largura + 1], // 2
         [largura + 1], // 3
         [largura + 1], // 4
     ]
 
+    // objeto para selecao aleatoria
     const pecas = [ipeca, opeca, lpeca, jpeca, tpeca, upeca, blockpeca]
 
-    let posicaoAtual = 3 // posicao no grid currentPosition
-    let rotacaoAtual = 0 // currentRotation
+    // posicao no tabuleiro de onde aparecem ao topo
+    var posicaoAtual = 3
+    let rotacaoAtual = 0
 
-    // select random
+    // selecao aleatoria de pecas
     let random = Math.floor(Math.random() * pecas.length)
-    let pecaAtual = pecas[random][rotacaoAtual] // current
+    let pecaAtual = pecas[random][rotacaoAtual]
 
     // desenho
-    function desenhar() {
-        pecaAtual.forEach(index => {
+    function desenhar () {
+        pecaAtual.forEach (index => {
             if (pecaAtual.length == 1) {
+                // certificar de que o bloco unico é preto
                 quadrados[posicaoAtual + index].style.backgroundColor = 'black'
-                console.log("pegou")
             } else {
                 quadrados[posicaoAtual + index].classList.add('peca')
                 quadrados[posicaoAtual + index].style.backgroundColor = cores[random]
@@ -134,17 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
             quadrados[posicaoAtual + index].style.backgroundColor = ''
         })
     }
+    // apagar()
 
-    // descer a cada segundo
-    // ritmo = setInterval(descer, velocidade)
-
+    // definicao de teclas para facilitar ao girar o tabuleiro
     var teclaEsquerda = 37
     var teclaCima = 38
     var teclaBaixo = 40
     var teclaDireita = 39
 
     // tecla pressionada
-    function controle(k) {
+    function controle (k) {
         if (k.keyCode === teclaEsquerda) {
             paraEsquerda()
         } else if (k.keyCode === teclaCima) {
@@ -165,11 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
         parar()
     }
 
-    // freeze
+    // interromper descida
     function parar() {
         if (pecaAtual.some(index => quadrados[posicaoAtual + index + largura].classList.contains('linhaAbaixo'))) {
             pecaAtual.forEach(index => quadrados[posicaoAtual + index].classList.add('linhaAbaixo'))
-            // aparecer novo
+            // aparecer nova
             random = proximoRandom
             proximoRandom = Math.floor(Math.random() * pecas.length)
             pecaAtual = pecas[random][rotacaoAtual]
@@ -181,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // mover pra esquerda
+    // mover para esquerda
     function paraEsquerda() {
         apagar()
         const bordaEsquerda = pecaAtual.some(index => (posicaoAtual + index) % largura === 0)
@@ -195,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
         desenhar()
     }
 
-    // mover pra direita
+    // mover para direita
     function paraDireita () {
         apagar()
         const bordaDireita = pecaAtual.some(index => (posicaoAtual + index) % largura === largura - 1)
@@ -209,9 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         desenhar()
     }
 
-    // tempo de video 1 hora -> rotacao
-
-    // ERRO PRA RODAR U E BLOCK, AINDA NAO SEI
+    // rotacao das pecas
     function rodar () {
         apagar()
         rotacaoAtual++
@@ -223,9 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
         pecaAtual = pecas[random][rotacaoAtual]
         desenhar()
     }
-    /////////////////////////////////////////////
 
-    // mostrar proximo
+    // mostrar proxima
     const quadradosDisplay = document.querySelectorAll('.mini-dentro div')
     const larguraDisplay = 4
     let indexDisplay = 0
@@ -241,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [larguraDisplay + 1], // block
     ]
 
-    // mostrar a proxmia
+    // mostrar a proxima
     function mostrarProxima () {
         // apagar peca anterior
         quadradosDisplay.forEach(quadrado => {
@@ -257,11 +272,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // botao play pause
     start.addEventListener('click', () => {
         if (ritmo) {
-            console.log("pause")
+            if (on_off == true) {
+                clearInterval(cronometro)
+                on_off = false
+            }
             clearInterval(ritmo)
             ritmo = null
         } else {
-            console.log("play")
+            if (on_off == false) {
+                clearInterval(cronometro)
+                cronometro = setInterval(() => {contadorTempo();}, 10)
+                on_off = true
+            }
             desenhar()
             ritmo = setInterval(descer, velocidade)
             proximoRandom = Math.floor(Math.random() * pecas.length)
@@ -269,9 +291,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 
+    restart.addEventListener('click', () => {
+        window.location.reload()
+    })
+
     // add pontos
     function addPonto () {
-        for (let p = 0; p < 199; p += largura) { // modificar pontuacao aqui?
+        for (let p = 0; p < 199; p += largura) {
             const linha = [p, p+1, p+2, p+3, p+4, p+5, p+6, p+7, p+8, p+9]
 
             if (linha.every(index => quadrados[index].classList.contains('linhaAbaixo'))) {
@@ -280,7 +306,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (pontos % 20 == 0) {
                     nivel_numero += 1
                     nivel.innerHTML = nivel_numero
-                    velocidade -= 100
+                    velocidade -= 200
                 }
                 eliminadas_numero++
                 linhas_eliminadas.innerHTML = eliminadas_numero
@@ -314,13 +340,98 @@ document.addEventListener('DOMContentLoaded', () => {
     // game over
     function gameOver () {
         if (pecaAtual.some(index => quadrados[posicaoAtual + index].classList.contains('linhaAbaixo'))) {
-            alert("acabou")
-            clearInterval(ritmo)
+            var resultado = confirm("Jogo finalizado! Jogar novamente?")
+            if (resultado == true) {
+                window.location.reload()
+            } else {
+                clearInterval(ritmo)
+            }
         }
     }
 
+    // cronometro
+    let hour = 0
+    let minute = 0
+    let second = 0
+    let millisecond = 0
+    let cronometro
+    let on_off = false
 
+    function contadorTempo () {
+        if ((millisecond += 10) == 1000) {
+            millisecond = 0
+            second++
+        }
+        if (second == 60) {
+            second = 0
+            minute++
+        }
+        if (minute == 60) {
+            minute = 0
+            hour++
+        }
+
+        document.querySelector('#hour').innerText = returnData(hour)
+        document.querySelector('#minute').innerText = returnData(minute)
+        document.querySelector('#second').innerText = returnData(second)
+    }
+    function returnData (input) {
+        return input > 10 ? input : `0${input}`
+    }
 })
 
 
+// infelizmente nao consegui fazer funcionar a selecao de diferentes tamanhos de tabuleiro
+function mudarTamanho () {
+    if (document.querySelector('#opcoes_tamanho').value == 2) {
+        var tabuleiro = document.querySelector('#dentro')
+        for (var p = 0; p < 10; p++) {
+            var linhas_abaixo = tabuleiro.querySelector('.linhaAbaixo')
+            linhas_abaixo.remove()
+        }
+        for (p = 0; p < 200; p++) {
+            var linhas_abaixo = tabuleiro.querySelector('div')
+            linhas_abaixo.remove()
+        }
+        
+        posicaoAtual = 6
+        largura = 22
 
+        tabuleiro.style.width = '225px'
+        tabuleiro.style.height = '445px'
+
+        for (p = 0; p < 22 * 44; p++) {
+            var linhas_abaixo = document.createElement('div')
+            tabuleiro.appendChild(linhas_abaixo)
+        }
+        for (p = 0; p < 22; p++) {
+            var linhas_abaixo = document.createElement('div')
+            linhas_abaixo.setAttribute('class', 'linhaAbaixo')
+            tabuleiro.appendChild(linhas_abaixo)
+        }
+
+        var filhos = tabuleiro.children
+ 
+        for (p = 0; p < 22 * 44; p++) {
+            filhos[p].style.width = '10px'
+            filhos[p].style.height = '10px'
+        }
+    } else {
+        let linhas_abaixo = document.querySelector('.linhaAbaixo')
+        document.querySelector('#dentro').remove(linhas_abaixo)
+        let quantidade_total = document.querySelector('div')
+        document.querySelector('#dentro').remove(quantidade_total)
+
+        posicaoAtual = 3
+        largura = 10
+
+        document.querySelector('#dentro').style.width = '200px'
+        document.querySelector('#dentro').style.height = '400px'
+
+        document.querySelector('#dentro div').style.width = '20px'
+        document.querySelector('#dentro div').style.height = '20px'
+
+        document.querySelector('.mini-dentro div').style.width = '20px'
+        document.querySelector('.mini-dentro div').style.height = '20px'
+    }
+}

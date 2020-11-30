@@ -7,52 +7,6 @@
 
         <link rel="stylesheet" href="estilo.css">
 
-        <style>
-            .espaco {
-                display: flex;
-            }
-
-
-            #dentro {
-                width: 200px;
-                height: 400px;
-                display: flex;
-                flex-wrap: wrap;
-                background-color: white;
-                border: 2px solid black;
-            }
-
-            #dentro div {
-                height: 20px;
-                width: 20px;
-            }
-
-            .peca {
-                /* background-color: blue; */
-            }
-
-
-            .mini-dentro {
-                margin: 0 auto;
-                width: 80px;
-                height: 80px;
-                display: flex;
-                flex-wrap: wrap;
-                background-color: white;
-                border: 2px solid black;
-
-            }
-
-            .mini-dentro div {
-                height: 20px;
-                width: 20px;
-            }
-
-            .roll {
-                transform: rotateZ(180deg);
-            }
-        </style>
-
         <script src="jogo.js"></script>
     </head>
     <body>
@@ -76,7 +30,7 @@
                                     <h4>Tamanho do Tabuleiro</h4>
                                 </div>
                                 <div class="esquerda">
-                                    <select onchange="">
+                                    <select onchange="mudarTamanho()" id="opcoes_tamanho">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                     </select>
@@ -108,7 +62,6 @@
                         <div class="modal pequeno">
                             <div id="tabuleiro" >
                                 <div class="linha espaco">
-                                    <!-- grid -> dentro -->
                                     <div class="coluna" id="dentro">
                                         <div></div>
                                         <div></div>
@@ -344,10 +297,10 @@
                                 </div>
                                 <div class="linha" id="controle_jogo">
                                     <div >
-                                        <button id="start-button" onclick="">Play/Pause</button>
+                                        <button id="start-button">Play/Pause</button>
                                     </div>
                                     <div >
-                                        <!-- <button onclick="" id="pausar"> pause </button> -->
+                                        <button id="restart-button">Recomeçar</button>
                                     </div>
                                 </div>
                             </div>
@@ -390,7 +343,7 @@
                                 <h4 >Tempo (s)</h4>
                             </div>
                             <div>
-                                <h4 id="tempo">0</h4>
+                                <h4><span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span></h4>
                             </div>
                         </div>
                         <div> 
@@ -405,7 +358,6 @@
             </section>
         </div>
 
-        
     </body>
 </html>
 
