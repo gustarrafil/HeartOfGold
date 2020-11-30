@@ -5,11 +5,15 @@
 
 
 document.addEventListener ('DOMContentLoaded', () => {
+
+    // definicoes gerais de elementos
+
     var dentro = document.querySelector('#dentro')
     let quadrados = Array.from(document.querySelectorAll('#dentro div'))
 
     const pontuacao = document.querySelector('#score')
     var pontos = 0
+
     const cores = [
         'orange',
         'red',
@@ -18,6 +22,7 @@ document.addEventListener ('DOMContentLoaded', () => {
         'blue',
         'pink',
     ]
+
     const start = document.querySelector('#start-button')
     const restart = document.querySelector('#restart-button')
 
@@ -39,6 +44,7 @@ document.addEventListener ('DOMContentLoaded', () => {
     linhas_eliminadas.innerHTML = eliminadas_numero
 
     ////////////////////////////////////////////////////
+
     // Desenho de peças considerando uma planilha
 
     // A1 0
@@ -62,6 +68,8 @@ document.addEventListener ('DOMContentLoaded', () => {
     // D4 width * 3 + 3
 
     ////////////////////////////////////////////////////
+
+    // construcao das pecas
 
     // pecas
     const ipeca = [
@@ -125,6 +133,10 @@ document.addEventListener ('DOMContentLoaded', () => {
     // objeto para selecao aleatoria
     const pecas = [ipeca, opeca, lpeca, jpeca, tpeca, upeca, blockpeca]
 
+    ////////////////////////////////////////////////////
+
+    // posicionamento e selecao de pecas
+
     // posicao no tabuleiro de onde aparecem ao topo
     var posicaoAtual = 3
     let rotacaoAtual = 0
@@ -132,6 +144,10 @@ document.addEventListener ('DOMContentLoaded', () => {
     // selecao aleatoria de pecas
     let random = Math.floor(Math.random() * pecas.length)
     let pecaAtual = pecas[random][rotacaoAtual]
+
+    ////////////////////////////////////////////////////
+
+    // efeito de movimentacao na tela
 
     // desenho
     function desenhar () {
@@ -155,6 +171,10 @@ document.addEventListener ('DOMContentLoaded', () => {
     }
     // apagar()
 
+    ////////////////////////////////////////////////////
+
+    // controles
+
     // definicao de teclas para facilitar ao girar o tabuleiro
     var teclaEsquerda = 37
     var teclaCima = 38
@@ -174,6 +194,10 @@ document.addEventListener ('DOMContentLoaded', () => {
         }
     }
     document.addEventListener('keydown', controle)
+
+    ////////////////////////////////////////////////////
+
+    // movimentacao geral
 
     // descer
     function descer() {
@@ -202,8 +226,10 @@ document.addEventListener ('DOMContentLoaded', () => {
     // mover para esquerda
     function paraEsquerda() {
         apagar()
-        const bordaEsquerda = pecaAtual.some(index => (posicaoAtual + index) % largura === 0)
 
+        // definicao da borda sendo algum quadrado multiplo do tamanho do tabuleiro
+        const bordaEsquerda = pecaAtual.some(index => (posicaoAtual + index) % largura === 0)
+        // se a peca anterior, a esquerda, nao for a borda, pode movimentar
         if (!bordaEsquerda) posicaoAtual -= 1
 
         if (pecaAtual.some(index => quadrados[posicaoAtual + index].classList.contains('linhaAbaixo'))) {
@@ -216,8 +242,10 @@ document.addEventListener ('DOMContentLoaded', () => {
     // mover para direita
     function paraDireita () {
         apagar()
-        const bordaDireita = pecaAtual.some(index => (posicaoAtual + index) % largura === largura - 1)
 
+        // definicao da borda sendo algum quadrado multiplo do tamanho do tabuleiro, menos 1
+        const bordaDireita = pecaAtual.some(index => (posicaoAtual + index) % largura === largura - 1)
+        // se a peca posterior, a direita, nao for a borda, pode movimentar
         if (!bordaDireita) posicaoAtual += 1
 
         if (pecaAtual.some(index => quadrados[posicaoAtual + index].classList.contains('linhaAbaixo'))) {
@@ -239,6 +267,8 @@ document.addEventListener ('DOMContentLoaded', () => {
         pecaAtual = pecas[random][rotacaoAtual]
         desenhar()
     }
+
+    ////////////////////////////////////////////////////
 
     // mostrar proxima
     const quadradosDisplay = document.querySelectorAll('.mini-dentro div')
@@ -269,8 +299,11 @@ document.addEventListener ('DOMContentLoaded', () => {
         })
     }
 
+    ////////////////////////////////////////////////////
+
     // botao play pause
     start.addEventListener('click', () => {
+        // on_off = false -> no bloco do cronometro, ao inicio do jogo
         if (ritmo) {
             if (on_off == true) {
                 clearInterval(cronometro)
@@ -290,10 +323,12 @@ document.addEventListener ('DOMContentLoaded', () => {
             mostrarProxima()
         }
     })
-
+    // botao restart do jogo
     restart.addEventListener('click', () => {
         window.location.reload()
     })
+
+    ////////////////////////////////////////////////////
 
     // add pontos
     function addPonto () {
@@ -301,19 +336,24 @@ document.addEventListener ('DOMContentLoaded', () => {
             const linha = [p, p+1, p+2, p+3, p+4, p+5, p+6, p+7, p+8, p+9]
 
             if (linha.every(index => quadrados[index].classList.contains('linhaAbaixo'))) {
+                // a cada linha eliminada
+                // somam-se 10 pontos
                 pontos += 10
                 pontuacao.innerHTML = pontos
+                // a cada 20 pontos, a frequencia de queda aumenta com a diminuicao do intervalo de tempo
                 if (pontos % 20 == 0) {
                     nivel_numero += 1
                     nivel.innerHTML = nivel_numero
                     velocidade -= 200
                 }
+                // e aumenta o numero de linhas eliminadas
                 eliminadas_numero++
                 linhas_eliminadas.innerHTML = eliminadas_numero
                 linha.forEach(index => {
                     quadrados[index].classList.remove('linhaAbaixo')
                     quadrados[index].classList.remove('peca')
                     if (quadrados[index].style.backgroundColor == 'black') {
+                        // ao girar o tabuleiro, gira 180 graus e os controles sao invertidos
                         if (dentro.classList.contains('roll')) {
                             dentro.classList.remove('roll')
                             teclaEsquerda = 37
@@ -330,6 +370,7 @@ document.addEventListener ('DOMContentLoaded', () => {
                     }
                     quadrados[index].style.backgroundColor = ''
                 })
+                // a linha abaixo é removida e uma linha acima é adicionada para o efeito
                 const linhaRemovida = quadrados.splice(p, largura)
                 quadrados = linhaRemovida.concat(quadrados)
                 quadrados.forEach(celula => dentro.appendChild(celula))
@@ -337,9 +378,12 @@ document.addEventListener ('DOMContentLoaded', () => {
         }
     }
 
+    ////////////////////////////////////////////////////
+
     // game over
     function gameOver () {
         if (pecaAtual.some(index => quadrados[posicaoAtual + index].classList.contains('linhaAbaixo'))) {
+            // finalizacao do jogo
             var resultado = confirm("Jogo finalizado! Jogar novamente?")
             if (resultado == true) {
                 window.location.reload()
@@ -348,6 +392,8 @@ document.addEventListener ('DOMContentLoaded', () => {
             }
         }
     }
+
+    ////////////////////////////////////////////////////
 
     // cronometro
     let hour = 0
