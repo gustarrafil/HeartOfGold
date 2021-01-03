@@ -23,13 +23,13 @@
                             <h2>Login</h2>
                         </div>
                         <div>
-                            <form  action="#!">
+                            <form method="POST" action="consulta_jogador.php">
                                 <div >
                                     <div >
                                         <h3><label for="input_user">Usuário</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="email" id="input_user" >
+                                        <input required type="text" id="input_user" name="username">
                                     </div>
                                 </div>
                                 
@@ -39,15 +39,16 @@
                                         
                                     </div>
                                     <div >
-                                        <input required type="password" id="input_pass" >
+                                        <input required type="password" id="input_pass" name="pwd">
                                     </div>
                                 </div>
 
                                 <div id="btn_entrar" >
                                     <div >
-                                        <a href="jogo.html" >
+                                        <!-- <a href="jogo.html" >
                                             <h3 >Entrar</h3>
-                                        </a>
+                                        </a> -->
+                                        <input type="submit" value="Entrar">
                                     </div>
                                     
                                 </div>

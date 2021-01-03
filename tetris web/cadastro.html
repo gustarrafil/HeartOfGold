@@ -26,14 +26,14 @@
                         </div>
                         <div >
                     
-                            <form  action="#!">
+                            <form method="POST" action="registro_jogador.php">
                         
                                 <div  >
                                     <div >
                                         <h3><label for="input_nome">Nome</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="text" id="input_nome" >
+                                        <input required type="text" id="input_nome" name="name_user">
                                     </div>
                                 </div>
                                 
@@ -42,7 +42,7 @@
                                         <h3><label for="input_cpf">CPF</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="text" id="input_cpf" >
+                                        <input required type="text" id="input_cpf" name="cpf">
                                     </div>
                                 </div>
 
@@ -51,7 +51,7 @@
                                         <h3><label for="input_tel">Telefone</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="text" id="input_tel" >
+                                        <input required type="text" id="input_tel" name="telefone">
                                     </div>
                                 </div>
 
@@ -60,7 +60,7 @@
                                         <h3><label for="input_nasc">Data de nascimento</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="date" id="input_nasc" >
+                                        <input required type="date" id="input_nasc" name="nascimento">
                                     </div>
                                 </div>
 
@@ -69,7 +69,7 @@
                                         <h3><label for="input_email_cad">E-mail</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="email" id="input_email_cad" >
+                                        <input required type="email" id="input_email_cad" name="email">
                                     </div>
                                 </div>
 
@@ -78,7 +78,7 @@
                                         <h3><label for="input_user_cad">Usuário</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="text" id="input_user_cad" >
+                                        <input required type="text" id="input_user_cad" name="username">
                                     </div>
                                 </div>
 
@@ -87,7 +87,7 @@
                                         <h3><label for="input_pass_cad">Senha</label></h3>
                                     </div>
                                     <div >
-                                        <input required type="password" id="input_pass_cad" >
+                                        <input required type="password" id="input_pass_cad" name="pwd">
                                     </div>
                                 </div>
 
@@ -96,17 +96,18 @@
                                         <h3>Escolha gênero que se identifica:</h3>
                                     </div>
                                     <div >
-                                        <label for="f_option"><input  type="checkbox" value="Feminino" id="f_option">Feminino</label>
-                                        <label for="m_option"><input  type="checkbox" value="Masculino" id="m_option">Masculino</label>
+                                        <label for="f_option"><input  type="checkbox" value="F" id="f_option" name="sexo">Feminino</label>
+                                        <label for="m_option"><input  type="checkbox" value="M" id="m_option" name="sexo">Masculino</label>
                                         
                                     </div>
                                 </div>
 
                                 <div id="btn_cadastrar">
                                     <div >
-                                        <a href="login.html" >
+                                        <input type="submit" value="Cadastrar">
+                                        <!-- <a href="login.html" >
                                             <h3 >Cadastrar</h3>
-                                        </a>
+                                        </a> -->
                                     </div>
                                     
                                 </div>

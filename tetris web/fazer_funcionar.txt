@@ -1,0 +1,8 @@
+Instalar XAMPP com Apache e MySQL
+
+Posicionar os arquivos dentro de htdocs/
+
+inicializar servidor apache
+inicializar mysql
+
+acessar localhost/login.html

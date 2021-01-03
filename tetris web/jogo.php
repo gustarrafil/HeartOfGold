@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -49,10 +53,57 @@
                                                 <th>nivel</th>
                                                 <th>duracao</th>
                                             </tr>
-                                            <tr><td>Guilherme</td><td>5000</td><td>8</td><td>2 min</td></tr>
-                                            <tr><td>Guilherme</td><td>6000</td><td>9</td><td>3 min</td></tr>
-                                            <tr><td>Guilherme</td><td>7000</td><td>10</td><td>4 min</td></tr>
+                                            <?php
+                                                $sname = "localhost";
+                                                $uname = "root";
+                                                $pwd = "";
+                                                try {
+                                                    $conn = new PDO("mysql:host=$sname;dbname=myDB", $uname, $pwd);
+                                                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                                                    
+
+                                                        try {
+                                                            $games_user = $conn->query('SELECT * 
+                                                                                        FROM games');
+
+                                                            
+                                                            $counter = 0;
+                                                            while($row = $games_user->fetch(PDO::FETCH_ASSOC)) {
+                                                                echo    "<tr>
+                                                                            <td>"
+                                                                                .$row["name_user"].split()[0].
+                                                                            "</td>
+                                                                            <td>"
+                                                                                .$row["score"].
+                                                                            "</td>
+                                                                            <td>"
+                                                                                .$row["level_reached"].
+                                                                            "</td>
+                                                                            <td>"
+                                                                                .$row["game_time"].
+                                                                            "</td>
+                                                                        </tr>";
+                                                                $counter++;
+                                                            }
+                                                            if($counter == 0) {
+                                                                echo "</table>Nenhum jogo terminado";
+                                                            }
+                                                        } catch(Exception $error) {
+                                                            echo "</table>Sem resposta do servidor";
+                                                        }
+                                                        
+                                                } catch(PDOException $e) {
+                                                    echo "Connection failed: " . $e->getMessage();
+                                                }
+                                            ?>
                                         </table>
+                                        <?php
+                                            if(!isset($_COOKIE["user"])) {
+                                                echo "Cookie named 'user' is not set!";
+                                            } else {
+                                                echo "Value is: " . $_COOKIE["user"];
+                                            }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
@@ -348,7 +399,7 @@
                         </div>
                         <div> 
                             <div>
-                                <a href="ranking.html">Ver Ranking</a>
+                                <a href="ranking.php">Ver Ranking</a>
                             </div>
                         </div>
                     </div>
