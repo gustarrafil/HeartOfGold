@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public todos: any[] = [];
+  public title: string = 'minhas tarefas';
 
   /**
    *
@@ -15,5 +16,9 @@ export class AppComponent {
     this.todos.push('passear com cachorro');
     this.todos.push('ir ao supermercado');
     this.todos.push('cortar o cabelo');
+  }
+
+  alterarTexto() {
+    this.title = 'teste';
   }
 }
