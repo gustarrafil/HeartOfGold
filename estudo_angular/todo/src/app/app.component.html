@@ -19,6 +19,10 @@
       maxlength="60" 
       minlength="3"
       formControlName="title">
+      <small 
+        *ngIf="form.controls.title.invalid && form.controls.title.pristine">
+        este campo deve conter entre 3 e 60 caracteres
+      </small>
     <button>salvar</button>
   </fieldset>
 </form>
