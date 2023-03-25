@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Todo } from 'src/models/todo.model';
 
 @Component({
@@ -10,10 +11,17 @@ export class AppComponent {
   public todos: Todo[] = [];
   public title: string = 'minhas tarefas';
 
-  /**
-   *
-   */
-  constructor() {
+  public form: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      title: ['', Validators.compose([
+        Validators.minLength(3),
+        Validators.maxLength(60),
+        Validators.required,
+      ])]
+      // title: ['insira sua tarefa', Validators.required]
+    });
     this.todos.push(
       new Todo(1, 'passear com cachorro', false)
     );

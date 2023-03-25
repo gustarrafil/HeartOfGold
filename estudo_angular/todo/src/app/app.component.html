@@ -9,3 +9,16 @@
     <button (click)="remove(todo)">remover</button> | 
   </li>
 </ul>
+
+<form [formGroup]="form">
+  <fieldset>
+    <label>tarefa</label>
+    <input 
+      type="text" 
+      placeholder="titulo da tarefa" 
+      maxlength="60" 
+      minlength="3"
+      formControlName="title">
+    <button>salvar</button>
+  </fieldset>
+</form>
