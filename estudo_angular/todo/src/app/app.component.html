@@ -1,6 +1,7 @@
 <h1>{{ title }}</h1>
 <button (click)="alterarTexto()">alterar</button>
 <ul>
+  <p *ngIf="todos.length == 0"><small>nao tem nenhuma tarefa hoje</small></p>
   <li 
     *ngFor="let todo of todos"
     >{{ todo.id }}. {{ todo.title }} - 
@@ -23,6 +24,6 @@
         *ngIf="form.controls.title.invalid && form.controls.title.pristine">
         este campo deve conter entre 3 e 60 caracteres
       </small>
-    <button [disabled]="form.invalid">salvar</button>
+    <button [disabled]="form.invalid" (click)="add()">salvar</button>
   </fieldset>
 </form>
