@@ -31,6 +31,8 @@ export class AppComponent {
     // this.todos.push(
     //   new Todo(3, 'cortar o cabelo', true)
     // );
+
+    this.load();
   }
 
   alterarTexto() {
@@ -55,19 +57,26 @@ export class AppComponent {
     if (index !== -1) {
       this.todos.splice(index, 1);
     }
+    this.save();
   }
 
   markAsDone(todo: Todo) {
     todo.done = true;
+    this.save();
   }
   
   markAsUndone(todo: Todo) {
     todo.done = false;
-
+    this.save();
   }
 
   save() {
     const data = JSON.stringify(this.todos);
     localStorage.setItem('todos', data);
+  }
+
+  load() {
+    const data: string|null = localStorage.getItem('todos');
+    this.todos = JSON.parse(data as string);
   }
 }
