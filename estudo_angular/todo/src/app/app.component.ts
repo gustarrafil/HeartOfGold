@@ -77,6 +77,11 @@ export class AppComponent {
 
   load() {
     const data: string|null = localStorage.getItem('todos');
-    this.todos = JSON.parse(data as string);
+    if (data) {
+      this.todos = JSON.parse(data);
+    }
+    else {
+      this.todos = [];
+    }
   }
 }
