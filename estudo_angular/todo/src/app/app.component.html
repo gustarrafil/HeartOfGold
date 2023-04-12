@@ -12,10 +12,8 @@
 </ul>
 
 <div id="modal" *ngIf="mode == 'add'" class="animated flipInX">
-
+<h1 class="text-center">nova tarefa</h1>
   <form [formGroup]="form">
-    <fieldset>
-      <label>tarefa</label>
       <input 
         type="text" 
         placeholder="titulo da tarefa" 
@@ -23,11 +21,14 @@
         minlength="3"
         formControlName="title">
         <small 
+        class="danger"
           *ngIf="form.controls.title.invalid && form.controls.title.pristine">
-          este campo deve conter entre 3 e 60 caracteres
+          este campo deve conter entre 3 e 60 caracteres<br>
         </small>
-      <button class="button" [disabled]="form.invalid" (click)="add()">salvar</button>
-    </fieldset>
+        <p class="text-center">
+
+          <button class="button" [disabled]="form.invalid" (click)="add()"><i class="far fa-save"></i> salvar</button>
+        </p>
   </form>
 </div>
 
