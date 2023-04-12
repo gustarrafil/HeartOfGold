@@ -1,13 +1,13 @@
 <h1 class="title animated tada">{{ title }}</h1>
 <button (click)="alterarTexto()">alterar</button>
 <ul class="animated flipInX" *ngIf="mode == 'list'">
-  <p *ngIf="todos.length == 0"><small>nao tem nenhuma tarefa hoje</small></p>
+  <p class="text-center" *ngIf="todos.length == 0"><small>nao tem nenhuma tarefa hoje</small></p>
   <li 
     *ngFor="let todo of todos"
-    >{{ todo.id }}. {{ todo.title }} - 
-    <button *ngIf="!todo.done" (click)="markAsDone(todo)">concluir</button> |
-    <button *ngIf="todo.done"(click)="markAsUndone(todo)">refazer</button> |
-    <button (click)="remove(todo)">remover</button> | 
+    >{{ todo.title }}
+    <button (click)="remove(todo)"><i class="far fa-trash-alt"></i></button> 
+    <button *ngIf="!todo.done" (click)="markAsDone(todo)"><i class="far fa-check-circle"></i></button>
+    <button *ngIf="todo.done"(click)="markAsUndone(todo)"><i class="fas fa-check-circle"></i></button>
   </li>
 </ul>
 
