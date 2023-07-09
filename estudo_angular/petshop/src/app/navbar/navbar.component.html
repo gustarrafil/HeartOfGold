@@ -6,8 +6,8 @@
                     teste
                 </a>
                 <ul class="uk-navbar-nav">
-                    <li><a href="#">produtos</a></li>
-                    <li><a href="#">meus pets</a></li>
+                    <li><a [routerLink]="['/']" routerLinkActive="uk-text-bold">produtos</a></li>
+                    <li><a [routerLink]="['/account/pets']">meus pets</a></li>
                     <li><a href="#">consultas</a></li>
 
                 </ul>
@@ -15,7 +15,7 @@
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li>
-                        <a href="#">
+                        <a href="#" [routerLink]="['/cart']" routerLinkActive="uk-text-bold">
                             carrinho
                             <span class="uk-badge">0</span>
                         </a>
