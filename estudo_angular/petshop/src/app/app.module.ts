@@ -10,6 +10,7 @@ import { ResetPasswordPageComponent } from './pages/account/reset-password-page/
 import { SignupPageComponent } from './pages/account/signup-page/signup-page.component';
 import { CartPageComponent } from './pages/store/cart-page/cart-page.component';
 import { ProdutsPageComponent } from './pages/store/produts-page/produts-page.component';
+import { FramePageComponent } from './pages/master/frame.page';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProdutsPageComponent } from './pages/store/produts-page/produts-page.co
     SignupPageComponent,
     PestPageComponentComponent,
     ProdutsPageComponent,
-    CartPageComponent
+    CartPageComponent,
+    FramePageComponent
   ],
   imports: [
     BrowserModule,
