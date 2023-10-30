@@ -9,4 +9,6 @@ export class TeamComponent {
   @Input() team: string[] = [];
   @Input() index = 0;
 
+  currentDate = new Date();
+
 }
