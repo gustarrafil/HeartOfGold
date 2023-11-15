@@ -1,5 +1,6 @@
 import MeuComponente from "./components/MeuComponente"
 import MeuContador from "./components/MeuContador"
+import MinhaLista from "./components/MinhaLista"
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <MeuBotao conteudo="e por fim aqui" idade={2} />
 
       <MeuContador />
+
+      <h1>listas</h1>
+      <MinhaLista/>
     </div>
   )
 }
