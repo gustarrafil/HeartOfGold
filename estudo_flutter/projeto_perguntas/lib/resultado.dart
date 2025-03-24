@@ -40,4 +40,5 @@ class Resultado extends StatelessWidget {
       ],
     );
   }
+  
 }
